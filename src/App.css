@@ -1,0 +1,40 @@
+.iconPizza {
+	width: 2rem;
+}
+
+.welcomeBg {
+	--opacidad-negro: 0.5;
+	background-image: linear-gradient(
+			rgba(0, 0, 0, var(--opacidad-negro)),
+			rgba(0, 0, 0, var(--opacidad-negro))
+		),
+		url("../pizza-various.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 23vh;
+}
+
+.shoppingImg img {
+	width: 200px;
+}
+
+.navLink {
+	text-decoration: none;
+	color: rgb(231, 122, 12);
+}
+.navLink :hover {
+	font-size: 1.6rem;
+}
+
+.active {
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.pizzaInfo {
+	height: 80vh;
+}
+
+.pizzaQuantityInput {
+	width: 60px !important;
+}
