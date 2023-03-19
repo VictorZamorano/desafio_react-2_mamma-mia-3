@@ -49,8 +49,8 @@ export default function PizzaContextProv({ children }) {
 		let total = 0;
 
 		cart.map((order) => {
-			const orderPrice = order.quantity * order.price; //11600 -> 22200
-			total = total + orderPrice; //0 -> 11600 | 11600 -> 22200
+			const orderPrice = order.quantity * order.price;
+			total = total + orderPrice;
 		});
 
 		setCartTotal(new Intl.NumberFormat().format(total));
