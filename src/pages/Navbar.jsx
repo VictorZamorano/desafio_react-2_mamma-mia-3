@@ -5,7 +5,7 @@ export const Navbar = () => {
 	const { cartTotal } = usePizzaContext();
 
 	return (
-		<div className="bg-dark d-flex justify-content-between sticky-top border-bottom border-warning navbar">
+		<div className="bg-dark d-flex justify-content-between sticky-top border-bottom border-warning navbar shadowBox">
 			<NavLink to={"/"} className="navLink">
 				<div className="d-flex justify-content-center align-items-center pt-1">
 					<img src="./iconPizza.png" alt="pizza" className="iconPizza ms-4" />

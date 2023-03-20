@@ -1,10 +1,16 @@
+import { Navigate, useNavigate } from "react-router-dom";
 import { usePizzaContext } from "../context/PizzaContextProv";
 
 export const PizzaInfo = (item) => {
 	const { addCart } = usePizzaContext();
+	const homeNavigate = useNavigate();
+
+	const handleClick = () => {
+		homeNavigate("/");
+	};
 
 	return (
-		<div>
+		<div className="d-flex flex-column justify-content-center">
 			<div className="d-flex justify-content-center align-items-center pizzaInfo ">
 				<div
 					className="card mb-3  bg-dark text-light border border-2 border-warning"
@@ -41,7 +47,7 @@ export const PizzaInfo = (item) => {
 							</div>
 							<div className="d-flex justify-content-around align-items-center ">
 								<p className="fs-2 fw-bold m-0 text-success">
-									VALOR: ${item.item.price}
+									VALOR: ${new Intl.NumberFormat().format(item.item.price)}
 								</p>
 								<button
 									type="button"
@@ -54,6 +60,14 @@ export const PizzaInfo = (item) => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="d-flex justify-content-center ">
+				<button
+					className="btn btn-lg btn-dark fw-bold text-warning"
+					onClick={handleClick}
+				>
+					Volver
+				</button>
 			</div>
 		</div>
 	);

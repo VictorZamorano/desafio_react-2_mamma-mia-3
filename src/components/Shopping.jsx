@@ -44,7 +44,10 @@ export const Shopping = () => {
 									</button>
 								</div>
 								<p className="m-0 fs-3 fw-bold text-success ">
-									Valor: $ {purchased.price}
+									Valor: ${" "}
+									{new Intl.NumberFormat().format(
+										purchased.price * purchased.quantity
+									)}
 								</p>
 							</div>
 						</li>

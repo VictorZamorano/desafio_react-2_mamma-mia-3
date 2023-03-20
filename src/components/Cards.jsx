@@ -10,7 +10,7 @@ export const Cards = ({ pizzas, handleClick, handleAdd }) => {
 					return (
 						<div className="row " key={pizza.id}>
 							<div
-								className="card mb-3 p-0 bg-dark text-light border border-2 border-warning"
+								className="card mb-3 p-0 bg-dark text-light border border-2 border-warning shadowCard"
 								style={{ maxWidth: "540px" }}
 							>
 								<div className="row g-0">

@@ -57,7 +57,7 @@ export default function PizzaContextProv({ children }) {
 	};
 
 	const removeItemFromCart = (id) => {
-		setCart((removePizza) => {
+		const itemRemove = (removePizza) => {
 			if (removePizza.find((item) => item.id == id).quantity == 1) {
 				return removePizza.filter((item) => item.id != id);
 			} else {
@@ -69,7 +69,9 @@ export default function PizzaContextProv({ children }) {
 					}
 				});
 			}
-		});
+		};
+
+		setCart(itemRemove);
 	};
 
 	useEffect(() => {
