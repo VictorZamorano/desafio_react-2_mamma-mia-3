@@ -56,14 +56,18 @@ export default function PizzaContextProv({ children }) {
 		setCartTotal(new Intl.NumberFormat().format(total));
 	};
 
-	const removeItemFromCart = (pizza) => {
-		let indexToRemove = -1;
-		cart.map((item, index) => {
-			if (item.id == pizza.id) {
-				if (item.quantity == 1) {
-					//eliminar item encontrado
-					//No terminado, se esta optimizando en otro proyecto
-				}
+	const removeItemFromCart = (id) => {
+		setCart((removePizza) => {
+			if (removePizza.find((item) => item.id == id).quantity == 1) {
+				return removePizza.filter((item) => item.id != id);
+			} else {
+				return removePizza.map((item) => {
+					if (item.id == id) {
+						return { ...item, quantity: item.quantity - 1 };
+					} else {
+						return item;
+					}
+				});
 			}
 		});
 	};

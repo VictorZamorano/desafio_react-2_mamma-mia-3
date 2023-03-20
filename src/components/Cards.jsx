@@ -17,7 +17,7 @@ export const Cards = ({ pizzas, handleClick, handleAdd }) => {
 									<div className="col-md-6 ">
 										<img
 											src={pizza.img}
-											className="img-fluid"
+											className="img-fluid rounded-start"
 											alt={pizza.name}
 											style={{ minWidth: "auto", minHeight: "100%" }}
 										/>

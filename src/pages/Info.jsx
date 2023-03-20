@@ -21,7 +21,6 @@ export const Info = () => {
 
 	useEffect(() => {
 		getPizza();
-		console.log(id);
 	}, []);
 
 	return <div>{!!pInfo && <PizzaInfo item={pInfo} />}</div>;

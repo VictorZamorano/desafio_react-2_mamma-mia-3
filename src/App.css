@@ -1,3 +1,9 @@
+body {
+	background-image: url("../bgPizza.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
 .iconPizza {
 	width: 2rem;
 }
@@ -8,7 +14,7 @@
 			rgba(0, 0, 0, var(--opacidad-negro)),
 			rgba(0, 0, 0, var(--opacidad-negro))
 		),
-		url("../pizza-various.jpg");
+		url("./pizza-various.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

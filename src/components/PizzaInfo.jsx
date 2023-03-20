@@ -1,5 +1,8 @@
+import { usePizzaContext } from "../context/PizzaContextProv";
+
 export const PizzaInfo = (item) => {
-	console.log(item.item);
+	const { addCart } = usePizzaContext();
+
 	return (
 		<div>
 			<div className="d-flex justify-content-center align-items-center pizzaInfo ">
@@ -11,7 +14,7 @@ export const PizzaInfo = (item) => {
 						<div className="col-md-6">
 							<img
 								src={item.item.img}
-								className="img-fluid"
+								className="img-fluid rounded-start"
 								alt={item.item.name}
 								style={{ minWidth: "auto", minHeight: "100%" }}
 							/>
@@ -43,6 +46,7 @@ export const PizzaInfo = (item) => {
 								<button
 									type="button"
 									className="btn btn-danger fw-bold text-light"
+									onClick={() => addCart(item.item)}
 								>
 									Agregar
 								</button>

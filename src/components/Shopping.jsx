@@ -4,7 +4,6 @@ export const Shopping = () => {
 	const { cart, removeItemFromCart, addCart } = usePizzaContext();
 	const { cartTotal } = usePizzaContext();
 
-	console.log(cart);
 	return (
 		<div className="d-flex flex-column align-items-center ">
 			{cart?.map((purchased) => {
@@ -15,7 +14,7 @@ export const Shopping = () => {
 								<img
 									src={purchased.img}
 									alt="purchased-pizza"
-									className="img-fluid"
+									className="img-fluid rounded"
 								/>
 								<p className="fs-3 ms-3 fs-2 fw-bold d-flex align-items-center text-warning">
 									{purchased.name.charAt(0).toUpperCase() +
@@ -25,7 +24,7 @@ export const Shopping = () => {
 							<div className="d-flex align-items-center justify-content-center flex-column me-5">
 								<div className="countHandler d-flex">
 									<button
-										onClick={() => removeItemFromCart(purchased)}
+										onClick={() => removeItemFromCart(purchased.id)}
 										className="btn btn-danger"
 									>
 										-
